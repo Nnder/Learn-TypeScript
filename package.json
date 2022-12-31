@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nnder/Learn-TypeScript.git"
+  },
+  "author": "Nnder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nnder/Learn-TypeScript/issues"
+  },
+  "homepage": "https://github.com/Nnder/Learn-TypeScript#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

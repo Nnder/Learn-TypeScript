@@ -1,13 +1,14 @@
-var isFetching = true;
-var int = 12;
-var str = "";
-var numberArray = [1, 1, 2, 3, 5, 8];
-var numberArray2 = [1, 1, 2, 3, 5, 8];
-var words = ["hello", "typescript"];
+"use strict";
+const isFetching = true;
+const int = 12;
+const str = "";
+const numberArray = [1, 1, 2, 3, 5, 8];
+const numberArray2 = [1, 1, 2, 3, 5, 8];
+const words = ["hello", "typescript"];
 // Tuple
-var contact = ['One', 1235];
+const contact = ['One', 1235];
 // Any
-var variable = 42;
+let variable = 42;
 variable = "String";
 // function
 function sayName(name) {
@@ -22,6 +23,6 @@ function infinite() {
     while (true) {
     }
 }
-var login = "admin";
-var id1 = 123;
-var id2 = "string";
+const login = "admin";
+const id1 = 123;
+const id2 = "string";

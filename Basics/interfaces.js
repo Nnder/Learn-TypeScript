@@ -1,6 +1,7 @@
+"use strict";
 // readonly только для чтения
 // ? необязательный
-var rect1 = {
+const rect1 = {
     id: "123",
     size: {
         width: 12,
@@ -8,7 +9,7 @@ var rect1 = {
     },
     color: '#ccc'
 };
-var rect2 = {
+const rect2 = {
     id: '1235',
     size: {
         width: 16,
@@ -16,29 +17,28 @@ var rect2 = {
     }
 };
 rect2.color = '#512';
-var rect3 = {};
-var rect4 = {};
-var rect5 = {
+const rect3 = {};
+const rect4 = {};
+const rect5 = {
     id: "1255",
     size: {
         width: 20,
-        height: 20
+        height: 20,
     },
-    getArea: function () {
+    getArea() {
         return this.size.height * this.size.width;
     }
 };
-var Clock = /** @class */ (function () {
-    function Clock() {
+class Clock {
+    constructor() {
         this.time = new Date();
     }
-    Clock.prototype.setTime = function (date) {
+    setTime(date) {
         this.time = date;
-    };
-    return Clock;
-}());
-var css = {
+    }
+}
+const css = {
     border: '1px solid black',
     marginTop: '2px',
-    borderRadius: '5px'
+    borderRadius: '5px',
 };

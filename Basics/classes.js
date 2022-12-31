@@ -1,27 +1,12 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var Typesript = /** @class */ (function () {
-    function Typesript(version) {
+"use strict";
+class Typesript {
+    constructor(version) {
         this.version = version;
     }
-    Typesript.prototype.info = function (name) {
-        return "".concat(name, " typescript version ").concat(this.version);
-    };
-    return Typesript;
-}());
+    info(name) {
+        return `${name} typescript version ${this.version}`;
+    }
+}
 // class Car {
 //     readonly model: string
 //     readonly numberOfWheel: number = 4
@@ -30,51 +15,36 @@ var Typesript = /** @class */ (function () {
 //         this.model = theModel
 //     }
 // }
-var Car = /** @class */ (function () {
-    function Car(model) {
+class Car {
+    constructor(model) {
         this.model = model;
         this.numberOfWheel = 4;
     }
-    return Car;
-}());
+}
 // модификаторы
-var Animal = /** @class */ (function () {
-    function Animal() {
+class Animal {
+    constructor() {
         this.voice = '';
         this.color = 'black';
     }
-    Animal.prototype.go = function () {
+    go() {
         console.log('go');
-    };
-    return Animal;
-}());
-var Cat = /** @class */ (function (_super) {
-    __extends(Cat, _super);
-    function Cat() {
-        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Cat.prototype.setVoice = function (voice) {
+}
+class Cat extends Animal {
+    setVoice(voice) {
         this.voice = voice;
-    };
-    return Cat;
-}(Animal));
-var cat = new Cat();
+    }
+}
+const cat = new Cat();
 // абстрактные классы
-var Component = /** @class */ (function () {
-    function Component() {
-    }
-    return Component;
-}());
-var AppComponent = /** @class */ (function (_super) {
-    __extends(AppComponent, _super);
-    function AppComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    AppComponent.prototype.render = function () {
+class Component {
+}
+class AppComponent extends Component {
+    render() {
         console.log('Render');
-    };
-    AppComponent.prototype.info = function () {
+    }
+    info() {
         return "this is info";
-    };
-    return AppComponent;
-}(Component));
+    }
+}
